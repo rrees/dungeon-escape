@@ -1,7 +1,7 @@
 import { h } from 'preact';
 
 export function DungeonPage(props) {
-	const currentRoom = props.game.dungeon.rooms[props.game.dungeon.currentRoom];
+	const currentRoom = props.game.dungeon.rooms[props.game.currentRoom];
 
 	return <div id="dungeon">
 		<h2>{props.game.dungeon.name}</h2>
