@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import { html } from 'htm/preact';
 
 import { Game } from './Game.js';
 
@@ -8,6 +9,6 @@ export class App extends Component {
 	}
 
 	render() {
-		return <Game {...this.props}/>;
+		return html`<${Game} {...this.props}/>`;
 	}
 } 

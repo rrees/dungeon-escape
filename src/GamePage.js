@@ -1,6 +1,5 @@
-
 import { h } from 'preact';
-
+import { html } from 'htm/preact';
 
 import { TitlePage } from './TitlePage.js';
 import { DungeonPage } from './DungeonPage.js';
@@ -12,14 +11,14 @@ export function GamePage(props) {
 	}
 
 	if(props.uiState === 'playing') {
-		return <DungeonPage
-			explore={explore}
-			game = {props.game} />;
+		return html`<${DungeonPage}
+			explore=${explore}
+			game=${props.game} />`;
 	}
 
 	if(props.uiState == 'won') {
-		return <VictoryPage playAgain={() => props.action('begin')} />;
+		return html`<${VictoryPage} playAgain=${() => props.action('begin')} />`;
 	}
 
-	return <TitlePage beginGame={() => props.action('begin')}/>;
+	return html`<${TitlePage} beginGame=${() => props.action('begin')}/>`;
 }

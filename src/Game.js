@@ -1,5 +1,6 @@
 
 import { h, Component } from 'preact';
+import { html } from 'htm/preact';
 
 import { GamePage } from './GamePage.js';
 
@@ -39,11 +40,11 @@ export class Game extends Component {
 	}
 
 	render() {
-		return <div id="game">
-		<GamePage
-			uiState={this.state.uiState}
-			game={this.state.game}
-			action={this.gameAction}/>
-    	</div>;
+		return html`<div id="game">
+		<${GamePage}
+			uiState=${this.state.uiState}
+			game=${this.state.game}
+			action=${this.gameAction} />
+    	</div>`;
 	}
 } 

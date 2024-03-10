@@ -1,6 +1,7 @@
-import {createDungeon as PitOfDespair} from './dungeons/PitOfDespair.js';
+import {createDungeon} from './dungeons/index.js';
+
 export function createGame() {
-	const dungeon =  PitOfDespair();
+	const dungeon =  createDungeon();
 	const gameVariables = {
 		currentRoom: 0,
 		complete: false,
