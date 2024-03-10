@@ -10,7 +10,7 @@ export function createGame() {
 }
 
 export function explore(game) {
-	let currentRoom = game.currentRoom;
+	const currentRoom = game.currentRoom;
 
 	if(currentRoom < game.dungeon.rooms.length - 1) {
 	 game.currentRoom = currentRoom + 1;
