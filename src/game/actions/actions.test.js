@@ -7,7 +7,16 @@ import {sneak} from './actions.js';
 describe('Sneaking', () => {
     it('is unnecessary if there is no monsters present', () => {
         const game = {
-            currentRoom: 1
+            currentRoom: 1,
+            dungeon: {
+                rooms: [
+                    {},
+                    {
+                        monsters: []
+                    },
+                    {}
+                ]
+        }
         };
 
         const nextGameState = sneak(game);
